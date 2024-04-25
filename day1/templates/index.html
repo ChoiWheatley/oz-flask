@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ data.title }}</title>
+</head>
+
+<body>
+    <h1>Hello, {{ data.user }}!</h1>
+
+    {% if data.is_admin %}
+    <p>You have admin privileges.</p>
+    {% else %}
+    <p>You do not have admin privileges.</p>
+    {% endif %}
+
+    <ul>
+        {% for item in data.myitems %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
